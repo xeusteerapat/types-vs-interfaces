@@ -1,4 +1,6 @@
 // types alias vs. interfaces
+//ANCHOR - https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#differences-between-type-aliases-and-interfaces
+
 /**
  * Both Types alias and Interfaces can describe the object
  */
@@ -53,6 +55,12 @@ interface IArea {
 interface IAddress extends IApartment, IArea {}
 
 const myAddress: Address = {};
+
+// Function type
+type AddFn = (num1: number, num2: number) => number;
+interface IAdd {
+  (num1: number, num2: number): number;
+}
 
 /**
  * Interface only describe object, but Types can describe everything
